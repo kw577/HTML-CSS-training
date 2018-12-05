@@ -7,14 +7,132 @@
 		<meta name="keywords" content="slowoKluczowe1, slowoKluczowe2, slowoKluczowe3"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		
+		<!-- Ponizej wlasnosci div   - bez uzycia plikow .css  -->
+		<!-- #container - width: 1000px;   stala szer. strony, baz responsywnosci, margin-left: auto, margin-right: auto;  -->
+		<!-- #logo - dziedziczy szerokosc po div #container  -->
+		<!-- color - kolor czcionki, text-align - polozenie tesktu, padding - minimalny odstep granic div'a od jego zawartosci  -->
+		
+		<!-- do wszystkich div'ow ulozonych szeregowo dodajemy zapis   float: left;     do pierwszego div'a ktory znowu ma ukladac sie pod spodem poprzednika dodajemy linie  clear: both;     -->
+		<!-- jesli ni ma takiego div'a to dodajemy go tylko po to zeby wyczyscic ustawienie rozlozenia szeregowego div'ow poprzez dodanie:     <div style="clear:both;"><div>   -->
+		<!-- div ma domyslnie taka wielkosc jaka jest wymagana ze wzgledu na jego zawartosc - jesli chcemy go powiekszyc nalezy uzywac  np   width,   min-height -->
+		
+		<style>
+		#container
+		{
+			width: 1000px; 
+			margin-left: auto; 
+			margin-right: auto;
+			
+		}
+		
+		#logo
+		{
+			
+			background-color: black;
+			
+			color: white;
+			text-align: center;
+			padding: 15px;
+		}
+		
+		
+		#nav
+		{
+			float: left;
+			
+			background-color: lightgrey;
+			width: 120px;
+			min-height: 620px;
+			padding: 10px;
+		}
+		
+		
+		#content
+		{
+			float: left;
+			padding: 20px;
+			width: 640px;
+		}
+		
+		
+		#ad
+		{
+			float: left;
+			width: 160px;
+			min-height: 620px;
+			padding: 10px;
+			background-color: lightgrey;
+			
+			
+		}
+		
+		
+		#footer
+		{
+			clear: both;
+			background-color: black;
+			color: white;
+			text-align: center;
+			padding: 20px;
+		}
+		
+		</style>
+		
+		
 	<head/>
 	
 	
 	<body>
 	
-		<h1>Nagłówek 1</h1>
+		<div id="container">
 		
-		Treść akapitu 1
+		
+			<div id="logo">
+			
+				<h1>Tytuł strony</h1>
+			
+			</div>
+		
+			
+			
+			<div id="nav">
+			
+				Opcja 1 <br/>
+				Opcja 2 <br/>
+				Opcja 3 <br/>
+				Opcja 4 <br/>
+				Opcja 5 <br/>
+				
+			</div>
+			
+					
+			
+			<div id="content">
+				
+				<h2>Nagłówek akapitu 1</h2>
+				<br/><br/>
+				Treść akapitu 1.
+				
+			</div>
+			
+			
+				
+			
+			<div id="ad">
+				
+				<img src="reklama.jpg"/>
+				
+			</div>
+			
+			
+			<div id="footer">
+				
+				Stronę wykonał: .... &copy;
+				
+			</div>
+			
+		
+		</div>
 		
 	</body>
 
