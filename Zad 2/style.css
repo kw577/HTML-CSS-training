@@ -67,6 +67,13 @@ body
 	text-align: center;
 }
 
+/*Efekt po najechaniu wskaznikiem myszy na ten div - UWAGA !!!!  - bez odstepu po znaku :hoover*/
+.tile1:hover
+{
+	background-color: #2084c2;
+}
+
+
 .tile2
 {
 	margin: 10px;
@@ -75,6 +82,12 @@ body
 	background-color: #777777;
 	float: left;
 	text-align: center;
+}
+
+
+.tile2:hover
+{
+	background-color: #555555;
 }
 
 .tile3
@@ -87,13 +100,21 @@ body
 	text-align: center;
 }
 
+.tile3:hover
+{
+	background-color: #82b637;
+}
+
 .tile4
 {
 	margin: 10px;
-	width: 480px;
-	height: 142px;
+	width: 420px;
+	height: 82px;
 	background-color: #ee5a32;
 	text-align: center;
+	font-size: 22px;
+	padding: 30px;
+	line-height: 150%; /*odstep miedzy liniami tekstu*/
 }
 
 .tile5
@@ -115,6 +136,12 @@ body
 	text-align: center;
 }
 
+.yt:hover
+{
+	background-color: #c83237;
+}
+
+
 .fb
 {
 	margin: 10px;
@@ -123,6 +150,11 @@ body
 	background-color: #4668b3;
 	float: left;
 	text-align: center;
+}
+
+.fb:hover
+{
+	background-color: #3557a2;
 }
 
 .gplus
@@ -135,6 +167,11 @@ body
 	text-align: center;
 }
 
+.gplus:hover
+{
+	background-color: #c84222;
+}
+
 .twitter
 {
 	margin: 10px;
@@ -143,4 +180,9 @@ body
 	background-color: #3095d3;
 	float: left;
 	text-align: center;
+}
+
+.twitter:hover
+{
+	background-color: #2084c2;
 }
