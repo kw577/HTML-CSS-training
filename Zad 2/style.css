@@ -1,0 +1,146 @@
+
+/*Formatowanie calej sekcji body*/
+body  
+{
+	background-color: #303030; 
+	color: #ffffff; /*domyslny kolor czcionki na calej stronie*/
+	font-family: 'Lato', sans-serif;  /*wygenerowany w google.fonts.com*/
+	font-size: 20px;
+}
+
+/*formatowanie konkretnego (pojedynczego) div'a oznaczonego poprzez # */
+#container
+{
+	
+	width: 1000px;  /*stala szerokosc - bez responsywnosci*/
+	margin-left: auto; /*wysrodkowanie*/
+	margin-right: auto;
+}
+
+
+/*formatowanie wszystkich div'ow klasy rectangle - oznaczone przez . */
+.rectangle
+{
+	width: 960px;
+	margin: 20px;
+	text-align: center;
+	
+}
+
+	
+.square
+{
+	width: 50%; /*50% szerokosci nadrzednego diva - czyli container - 500px*/
+	float: left;
+}
+
+#logo
+{
+	float: left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 70px;
+	width: 600px;
+	text-align: left;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#zegar
+{
+	float: left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 70px;
+	text-align: left;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.tile1
+{
+	margin: 10px;
+	width: 230px;
+	height: 142px;
+	background-color: #3095d3;
+	float: left;
+	text-align: center;
+}
+
+.tile2
+{
+	margin: 10px;
+	width: 230px;
+	height: 142px;
+	background-color: #777777;
+	float: left;
+	text-align: center;
+}
+
+.tile3
+{
+	margin: 10px;
+	width: 230px;
+	height: 142px;
+	background-color: #93c748;
+	float: left;
+	text-align: center;
+}
+
+.tile4
+{
+	margin: 10px;
+	width: 480px;
+	height: 142px;
+	background-color: #ee5a32;
+	text-align: center;
+}
+
+.tile5
+{
+	margin: 10px;
+	width: 480px;
+	height: 304px;
+	background-color: #777777;
+	
+}
+
+.yt
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #d94348;
+	float: left;
+	text-align: center;
+}
+
+.fb
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #4668b3;
+	float: left;
+	text-align: center;
+}
+
+.gplus
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #d95333;
+	float: left;
+	text-align: center;
+}
+
+.twitter
+{
+	margin: 10px;
+	width: 105px;
+	height: 142px;
+	background-color: #3095d3;
+	float: left;
+	text-align: center;
+}
