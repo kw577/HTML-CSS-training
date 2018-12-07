@@ -87,7 +87,7 @@ body
 
 .tile2:hover
 {
-	background-color: #555555;
+	background-color: #888888;
 }
 
 .tile3
@@ -120,10 +120,11 @@ body
 .tile5
 {
 	margin: 10px;
-	width: 480px;
-	height: 304px;
+	width: 420px;
+	height: 244px;
 	background-color: #777777;
-	
+	text-align: justify;
+	padding: 30px;
 }
 
 .yt
@@ -185,4 +186,47 @@ body
 .twitter:hover
 {
 	background-color: #2084c2;
+}
+
+a.tilelink
+{
+	color: #ffffff; /*link ma być zapisany czcionka koloru bialego - domyslnie jest to niebieski*/
+	text-decoration: none;  /*brak podkreslenia linka*/
+	display: block; /*dzieki temu zapisowi link bedzie dzialal nie tylko po nacicnieciu napisu ale caly div bedzie linkiem*/
+	width: 230px;
+	height: 142px;
+	
+	
+}
+
+
+a.tilelink
+{
+	color: #ffffff; /*link ma być zapisany czcionka koloru bialego - domyslnie jest to niebieski*/
+	text-decoration: none;  /*brak podkreslenia linka*/
+	display: block; /*dzieki temu zapisowi link bedzie dzialal nie tylko po nacicnieciu napisu ale caly div bedzie linkiem*/
+	width: 230px;
+	height: 142px;
+	
+	
+}
+
+
+a.tilelinkhtml5
+{
+	color: #ffffff; /*link ma być zapisany czcionka koloru bialego - domyslnie jest to niebieski*/
+	text-decoration: none;  /*brak podkreslenia linka*/
+	
+	
+}
+
+a.sociallink /*od tilelink - rozni sie jedynie szerokoscia*/
+{
+	color: #ffffff; /*link ma być zapisany czcionka koloru bialego - domyslnie jest to niebieski*/
+	text-decoration: none;  /*brak podkreslenia linka*/
+	display: block; /*dzieki temu zapisowi link bedzie dzialal nie tylko po nacicnieciu napisu ale caly div bedzie linkiem*/
+	width: 105px;
+	height: 142px;
+	
+	
 }
