@@ -1,0 +1,149 @@
+/*domyslne wlasciwosci strony*/
+body
+{
+	background-color: #404040; /*  https://www.webpagefx.com/web-design/color-picker/ */
+	font-family: 'Lato', sans-serif; /*czcionka z google fonts - poza tym trzeba jeszcze dodac odniesienie do tej czcionki w sekcji body pliku index.html*/
+}
+
+/* # identyfikuje unikatowy div - wystepujacych tylko raz na stronie*/
+/* . identyfikuje klase div'ow - grupa div'ow o takich samych wlasnosciach*/
+/*domyslnie div'y ukladaja sie jeden pod drugim*/
+#container
+{
+	width: 1000px; /*stala szerokosc strony - bez responsywnosci*/
+	margin-left: auto; /*marginesy ustawione na automatyczne - wysrodkowanie strony*/
+	margin-right: auto;
+}
+
+/* margin: 20px;  zostanie dodany margines dookola div'a */
+/* margin-top: 20px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px; marginesy jednostrone*/
+/*padding to powiekszenie div'a wzgledem jego zawartosci - domyslnie div ma minimalny rozmiar tak aby obejmowal swoja zawartosc - padding dodatkowo powieksza rozmiar div'a*/
+/*roznice miedzy margin - padding -> margin okresla odstep miedzy div'ami */
+
+#logo
+{
+	color: white; /*kolor czcionki*/
+	margin-top: 20px;
+	font-size: 44px; /*wielkosc czcionki*/
+	letter-spacing: 3px; /*odstep miedzy literami*/
+	font-weight: 900; /*pogrubienie czcionki*/
+}
+
+#menu
+{
+	background-color: #303030; /*kolor tla*/
+	margin-top: 20px;
+	color: #ffffff; /*kolor czcionki*/
+	padding: 10px; 
+	
+}
+
+#topbar
+{
+	background-color: #128870;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	height: 170px;
+}
+
+#topbarL
+{
+	float:left; /*razem z div'em topbarR tworzy uklad szeregowy - poza tym nalezy jeszcze dobrac odpowiednie szerokosci aby div'y zmiescily sie obok siebie*/
+	padding: 20px;
+	width: 138px; 
+	text-align: center;
+	border-right: 2px dotted #cccccc;
+}
+
+#topbarR
+{
+	float: left; /*razem z div'em topbarL tworzy uklad szeregowy, poza tym nalezy jeszcze dobrac odpowiednie szerokosci aby div'y zmiescily sie obok siebie*/
+	padding: 20px;
+	width: 760px;
+	font-size: 16px;
+	text-align: justify; /*wyjustowanie tekstu*/
+}
+
+#sidebar
+{
+	float: left; /*razem z div'em content tworzy uklad szeregowy - poza tym nalezy jeszcze dobrac odpowiednie szerokosci aby div'y zmiescily sie obok siebie*/
+	width: 148px;
+	min-height: 620px;
+	padding:20px;
+	background-color: lightgray;
+	text-align: center; /*wysrodkowanie tekstu*/
+	font-size: 18px;
+	border-right: 2px dotted #888888;
+}
+
+#content
+{
+	float: left; /*razem z div'em sidebar tworzy uklad szeregowy - poza tym nalezy jeszcze dobrac odpowiednie szerokosci aby div'y zmiescily sie obok siebie*/
+	padding: 40px;
+	width: 730px;
+	background-color: #dedede;
+	min-height: 580px;
+	text-align: justify;
+}
+
+#footer
+{
+	clear: both; /*czysci formatowanie float:left; ktore wystepuje w div'ach sidebar i content*/
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+}
+
+.option
+{
+	float: left; /*te divy bede ulozone szerogowe - po nich nalezy wstawic div zawierajacy clear: both;*/
+	min-width: 50px; /*minimalna szerokosc*/
+	height: 25px; /*wysokosc div'a*/
+	font-size: 18px;
+	padding: 10px;
+	border-right: 2px dotted #444444; /*obramowanie div'a - z prawej strony*/
+	/*border - obramowanie dookola div'a - dotted - linia przerywana. solid - linia ciagla*/
+	opacity: 0.8; /*przezroczystosc*/
+}
+
+
+/*efekty po najechaniu kursorem*/
+.option:hover
+{
+	background-color: #000000; 
+	cursor: pointer; /*zmiana wygladu kursora po najechaniu na ten div*/
+}
+
+.optionL
+{
+	font-size:18px;
+	height:25px;
+	padding: 10px;
+	border-bottom: 2px dotted #444444;
+}
+
+.optionL:hover
+{
+	background-color: #f36742;
+	color: white;
+	cursor: pointer; /*zmiana wygladu kursora po najechaniu na ten div*/
+}
+
+
+.bigtitle
+{
+	font-size: 32px;
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.dottedline
+{
+	height: 5px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-bottom: 2px dotted #444444;
+}
