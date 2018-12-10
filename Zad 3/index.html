@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Katalog samochodowy</title>
+	<meta name="description" content="Stwórz wymarzony model swojego samochodu!">
+	<meta name="keywords" content="samochód, katalog, salon, nowe auto">
+	<meta name="author" content="Jan Nowak">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1>Wybierz konfigurację samochodu</h1>
+
+	</header>
+	
+	<main>
+	
+		<article>
+			
+			<!--action - ktory skrypt ma odebrac wartosc z formularza (tu pusty gdyz dane nie sa nigdzie przekazywane)-->
+			<!--method - metoda http -->
+			<!--enctype - metoda kodowania enctype="multipart/form-data"   - jesli wysyla sie formularzem jakis plik   lub   enctype="text/plain" - klasyczny tekst bez kodowania znakow-->
+			<!--Ponizej rozne metody zapisu-->
+			<!--Parametr name=""  pozwala na powiazanie ze soba wszystkich opcji - wybranie 1 z nich powoduje automatyczne odznaczenie pozostałych, name jest tez identyfikatorem pozwalajacym na odebranie wartosci wpisanej w formularzu przez serwer  -->
+			<!--checked - domyslnie zaznaczona opcja -->
+			<!--nie jest konieczne zamykanie  kazdej opcji w osobnym <div> ale mozna w ten sposob wymusic aby kazda opcja byla w nowej liniii -->
+			<!-- fieldset - opcjonalne - ramka wokol formularza -->
+			<!-- legend - opcjonalne - opis formularza -->
+			<!-- value - przechowuje wartosc jaka zstanie wyslana do serwera po wybraniu okreslonego box'a - np jesli uzykownik wybierze hatchback zostanie przeslana wartosc "1" - ale mozna tez np ustawic jakies string np po prostu "hatchback"-->
+			<form action="order.php" method="post" enctype="application/X-www-form-urlencoded">
+			
+				<div class="row">
+					<fieldset>
+					
+						<legend>Rodzaj nadwozia</legend>
+					
+						<div><input type="radio" value="1" id="nadwozie" name="nadwozie"> <label for="nadwozie">Hatchback</label></div>
+						<div><label><input type="radio" value="2" name="nadwozie" checked>Kabriolet</label></div>
+						<div><label><input type="radio" value="3" name="nadwozie">Kombi</label></div>
+					</fieldset>	
+				</div>
+				
+				
+				
+				
+				<div class="row">
+					<label for="silnik">Rodzaj silnika</label>
+					<select id="silnik" name="silnik">
+						<option value="d">diesel</option>
+						<option value="b" selected> benzynowy</option> 
+						<option value="e">elektryczny</option>
+						<option value="h">hybrydowy</option>
+					
+					</select>
+				</div>
+				
+				
+				<div class="row">
+					<fieldset>
+						<legend>Wyposażenie samochodu</legend>
+						
+						<!--checked - pole jest domyslnie zaznaczone -->
+						<!--disabled checked - pole jest domyslnie zaznaczone i niemozliwa jest jego edycja-->
+						<!--wyp[]  - oznacza ze wyniki beda przekazywane do serwera w formie tablicy -->
+						<div class="col">
+							<div><label><input type="checkbox" value="1" name="wyp[]" checked>klimatyzacja</label></div>
+							<div><label><input type="checkbox" value="2" name="wyp[]" disabled checked>ABS</label></div>
+						</div>
+						
+						<div class="col">
+							<div><label><input type="checkbox" value="3" name="wyp[]">skórzana tapicerka</label></div>
+							<div><label><input type="checkbox" value="4" name="wyp[]">tempomat</label></div>
+						</div>
+
+						<div class="col">						
+							<div><label><input type="checkbox" value="5" name="wyp[]">przyciemniane szyby</label></div>
+							<div><label><input type="checkbox" value="6" name="wyp[]">światła LED</label></div>
+						</div>
+					
+					
+					</fieldset>				
+				</div>
+				
+				
+				
+				<div class="row">
+					<label for="choinka">Jakie choinki zapachowe ?</label>
+					<!--parametr multiple - lista wilokrotnego wyboru -->
+					<!--parametr size - okresla ile opcji jest widocznych na raz -->
+					<!--choinka[] - wyniki przekazywane w formie tablicy do serwera -->
+					<div style="margin-top: 10px;">
+						<select id="choinka" name="choinka[]" multiple size="3">
+							<option value="l">las</option>
+							<option value="oc" selected>ocean</option> 
+							<option value="ow">owocowa</option>
+							<option value="k">kawowa</option>
+						
+						</select>
+					</div>
+				</div>
+				
+				
+				
+				
+				<div class="row">
+					<!--parametr name - sluzy do odbierania wartosci po stronie serwera -->
+					<label>Imię <input type="text" name="imie" placeholder="Wpisz swoje imię"></label>
+					<label>Hasło <input type="password" name="haslo"></label>
+					<label>Szukaj <input type="search" name="fraza"></label>
+				
+				</div>
+				
+				
+				
+				<div class="row">
+					<!--input type - number - mozna tu wpisywac jedynie cyfry i litere "e" - do zapisu naukowego -->
+					<!--step - krok zmiany wartosci - domyslnie 1 - wtedy dopuszczalne sa tylko liczby calkowite -->
+					<label>Ile kluczyków ? <input type="number" step="1" name="kluczyk"></label>
+				</div>
+				
+				
+				<div class="row">
+					<!--przycisk wyslania formularza -->
+					<input type="submit" value="Zamów">
+					
+					<!--ten przycisk rowniez wysyla formularz -->
+					<button>Zamawiam</button>
+					
+					<!--przycisk button nie powoduje wyslania formularza -->
+					<!--jego zaleta jest mozliwosc wykorzystania np jakiegos zdjecia jako przycisku -->
+					<input type="button" value="Zamów">
+					
+				</div>
+				
+			</form>		
+			
+		</article>
+		
+	</main>
+
+</body>
+</html>
