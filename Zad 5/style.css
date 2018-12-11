@@ -1,0 +1,120 @@
+/*zerowanie domyslnych marginesow przegladarki internetowej, klauzula important pomijajaca kaskadowosc */
+
+
+/*wlasciwosci domyslne*/
+body
+{
+	background-color: #303030;
+	color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	margin: 0 !important; /*zerowanie domyslnych marginesow przegladarki internetowej, important - wymuszenie takiego ustawienia bez wzgledu na wystepujaca kaskadowosc - nie naklada ustawien z div'ow kolejnego rzedu*/
+}
+
+/*glowny div zajmuje cala szer ekranu - jest to zapis opcjonalny bo domyslnie div i tak zajmuje cala szer. ekranu*/
+.wrapper
+{
+	width: 100%;
+}
+
+
+.header
+{
+	width:100%;
+	padding: 40px 0; /*pierwsza wartosc oznacza padding w pionie a druga w poziomie*/
+}
+
+.logo
+{
+	width: 450px;
+	font-size: 48px;
+	margin-left: auto; /*ustawienie margin-left i margin-right na auto - powoduje wysrodkowanie tego div'a */
+	margin-right: auto;
+	
+}
+
+.nav
+{ 
+	width: 100%;
+	padding: 10px 0; /*pierwsza wartosc oznacza padding w pionie a druga w poziomie*/
+	background-color: #c34f4f;
+	text-align: center;
+	border-top: 1px solid #751b1b;
+	border-bottom: 1px solid #751b1b;
+	
+	height: 40px;
+}
+
+.content
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify; /*wyjustowanie tekstu*/
+	padding-top: 10px;
+	min-height: 700px;
+}
+
+.socials
+{
+	width:100%;
+	text-align: center;
+	background-color: #292929;
+}
+
+.socialdivs
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fb
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+
+/*UWAGA!!! nie dawac spacji w zapisie typu   .fb:hover   */
+.fb:hover
+{
+	background-color: #4668b3;
+}
+
+.yt
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.yt:hover
+{
+	background-color: #d94348;
+}
+
+.tw
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.tw:hover
+{
+	background-color: #3095d3;
+}
+
+.gplus
+{
+	width: 250px;
+	height: 155px;
+	float:left;
+}
+
+.gplus:hover
+{
+	background-color: #d95333;
+}
