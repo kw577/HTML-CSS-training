@@ -1,5 +1,12 @@
 /*zerowanie domyslnych marginesow przegladarki internetowej, klauzula important pomijajaca kaskadowosc */
 
+/*dodanie biblioteki jQuery - ze strony jQquery.com/downlod - pobieramy skompresowana wersje biblioteki - np wersja jquery-1.11.1.min.js
+- wrzucamy ten plik do folderu z projektem
+
+
+*/
+
+
 
 /*wlasciwosci domyslne*/
 body
@@ -52,7 +59,7 @@ body
 	margin-right: auto;
 	text-align: justify; /*wyjustowanie tekstu*/
 	padding-top: 10px;
-	min-height: 700px;
+	min-height: 900px;
 }
 
 .socials
@@ -118,3 +125,19 @@ body
 {
 	background-color: #d95333;
 }
+
+.footer
+{
+	text-align: center;
+	background-color: #222222;
+	padding: 30px;
+}
+
+/*z klasy sticky korzysta skrypt javascript - po dodaniu klasy .sticky do klasy .nav - nastapi przyklejenie paska nawigacji do gonej czesci strony*/
+.sticky
+{
+	width: 100%;
+	position: fixed; /*ten atrybut powoduje wlasnie przyklejenie paska nawigacji do gory strony*/
+	left: 0; /*wartosci wspolrzednej punktu do ktorego zatanie przyklejony pasek nawigacji*/
+	top: 0; /*wartosci wspolrzednej punktu do ktorego zatanie przyklejony pasek nawigacji*/
+	z-index: 100; /*okresla kolejnosc ulozenia warstw rysunku - przyjmujemy po prostu jakas dodatnia wartosc aby pasek byl zawsze na wierzchu/
