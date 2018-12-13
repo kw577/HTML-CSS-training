@@ -1,0 +1,82 @@
+body
+{
+	/* dodanie zdjecia jako tla */
+	background-image: url("img/hexellence.png");
+	font-size: 20px;
+}
+
+/*stylizacja glownego div'a*/
+#container
+{
+	background-color: white;
+	width: 300px;
+	padding: 50px;
+	margin-left: auto; /*wysrodkowanie formularza*/
+	margin-right: auto;
+	margin-top: 100px;
+	
+	/*box-shadow - zapis dla roznych przegladarek*/
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9); /*efekt graficzny - generator - https://www.cssmatic.com/box-shadow*/
+	-moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9); /*efekt graficzny - https://www.cssmatic.com/box-shadow*/
+	box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9); /*efekt graficzny - https://www.cssmatic.com/box-shadow*/
+}
+
+
+/*wyglad pol formularza - taki sam wyglad dla pola wpisywania tekstu i pola wpisywania hasla*/
+input[type=text],
+input[type=password]
+{
+	width: 300px;
+	background-color: #efefef;
+	color: #888;
+	border: 2px solid #ddd;
+	border-radius: 5px; /*promien zagiecia obramowania*/
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box; /*szerokosc pola formularza stala - nie zalezna od rozmiaru zawartosci*/
+	outline: none; /*jest to obramowanie oznaczjace aktywne pole formularza - tzn to pole w ktore aktualnie cos jest wpisywane   - tu wylaczamy domyslny outline*/
+}
+
+/*dodatkowe efekty gdy pole tekstowe lub pole hasla sa aktywne - gdy uzykownik cos wpisuje w to pole*/
+input[type=text]:focus,
+input[type=password]:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9); /*tak jak dla div'a container */
+	-moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	border: 2px solid #a5cda5; /*obramowanie*/
+	background-color: #e9f3e9; /*kolor tla*/
+	color: #428c42;/*kolor wpisywanego tekstu*/
+}
+
+
+/*stylizacja przycisku submit*/
+input[type=submit]
+{
+	width: 300px;
+	background-color: #36b03c;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer; /*po najechaniu kursorem na przycisk zmienia sie jego wyglad*/
+	letter-spacing: 2px; /*odstep miedzy literami*/
+	outline: none; /*jest to obramowanie oznaczjace aktywne pole formularza - tzn to pole w ktore aktualnie cos jest wpisywane   - tu wylaczamy domyslny outline*/
+}
+
+
+/*efekty po najechaniu kursorem na przycisk submit*/
+input[type=submit]:hover
+{
+	background-color: #37b93d;
+}
+
+/*efekty po kliknieciu przycisku submit*/
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+}
