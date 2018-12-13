@@ -16,17 +16,14 @@
 	<div id="container">
 		<form>
 			
-			Login
-			<input type="text">
+			<!--onfocus="this.placeholder=''"     - ten zapis sprawia ze placeholder znika od razu po kliknieciu w jakies pole formularza - jeszcze zanim zacznie sie wpisywac-->
+			<!--onblur="this.placeholder='login'"   - ten zapis sprawia ze placeholder ponownie pojawi sie gdy dane pole formularza nie jest aktywne -->
 			
-			<br /><br />
+			<input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'" >
 			
-			Hasło
-			<input type="password">
+			<input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" >
 			
-			<br /><br />
-			
-			<input type="submit"value="Zaloguj się">
+			<input type="submit" value="Zaloguj się">
 			
 		</form>
 	</div>
