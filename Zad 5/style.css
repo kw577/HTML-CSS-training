@@ -49,7 +49,7 @@ body
 	border-top: 1px solid #751b1b;
 	border-bottom: 1px solid #751b1b;
 	
-	height: 40px;
+	
 }
 
 .content
@@ -133,11 +133,102 @@ body
 	padding: 30px;
 }
 
-/*z klasy sticky korzysta skrypt javascript - po dodaniu klasy .sticky do klasy .nav - nastapi przyklejenie paska nawigacji do gonej czesci strony*/
+/*z klasy sticky korzysta skrypt javascript - po dodaniu klasy .sticky do klasy .nav - nastapi przyklejenie paska nawigacji do gonej czesci strony - dzieje sie to posrednio przez wykorzystnie paramateru text-align: center;  div'a nav*/
 .sticky
 {
 	width: 100%;
 	position: fixed; /*ten atrybut powoduje wlasnie przyklejenie paska nawigacji do gory strony*/
 	left: 0; /*wartosci wspolrzednej punktu do ktorego zatanie przyklejony pasek nawigacji*/
 	top: 0; /*wartosci wspolrzednej punktu do ktorego zatanie przyklejony pasek nawigacji*/
-	z-index: 100; /*okresla kolejnosc ulozenia warstw rysunku - przyjmujemy po prostu jakas dodatnia wartosc aby pasek byl zawsze na wierzchu/
+	z-index: 100; /*okresla kolejnosc ulozenia warstw rysunku - przyjmujemy po prostu jakas dodatnia wartosc aby pasek byl zawsze na wierzchu */
+	
+}
+
+
+/*styl wygladu listy rozwijanej*/
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none; /*usuniecie znacznikow listy - numeracja, punktory, znaczniki itd*/
+	font-size: 18px;
+	height: 35px;
+	line-height: 200%; /*interlinia*/
+	display: inline-block; /*dziala pododbnie jak float-left  -  w tym przypadku sluzy do wysrodkowania paska menu na stronie - */
+}
+	
+	
+	
+/*styl wygladu hiperlaczy zawartych w listach rozwijanych*/	
+ol a
+{
+	color: #ffffff; /*kolor czcionki hiperlaczy*/
+	text-decoration: none; /*usuniecie podkreslenia   - domyslnie dla hiperlaczy mamy:    text-decoration: underline;   */
+	display: block; /*link zachowuje sie jak element blokowy tzn - caly obrys napisu jest aktywnym linkiem a nie tylko sam napis*/
+}
+
+
+/*styl elementu li ale tylko tych, ktore pochodza od elementu ol */
+ol > li
+{
+	float: left; /*elementy listy ulozone szeregowo obok siebie*/
+	width: 150px;
+	height: 40px;
+	border-right: 1px dashed #751b1b; /*obramowanie z prawej strony*/
+}
+
+
+/*dodatkowe wlasciwosci dla pierwszego elementu li zawaartego w elemenci ol*/
+ol > li:first-child
+{
+	border-left: 1px dashed #751b1b; /*obramowanie z lewej strony*/
+}
+
+/*wlasciwosci elementow li zawartych w elementach ol - gdy najedzie sie na nie kursorem */
+ol > li:hover
+{
+	background-color: #cf6969;
+}
+
+
+/*wlasciwosci hiperlaczy w elementach li które sa zawarte w elementach ol - gdy najedzie sie na nie kursorem */
+ol > li:hover > a
+{
+	color: #451717;
+}
+
+
+
+/*stylizacja elementow ul - ale tylko tych ktore sa zawarte w elementach li ktore sa zaw. w elementach ol*/
+ol > li > ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none; /*lista ul domyslnie nie jest wyswietlana    - bedzie wyswietlana po najechaniu kursorem na element zawierajacy go - li        opisano ponizej w    ol > li:hover > ul {}*/
+}
+
+ol > li:hover > ul
+{
+	display: block;
+}
+
+ol > li > ul > li
+{
+	background-color:#cf6969;
+	position: relative; /*pozycja relatywna do elementu ul    - chodzi o kolejnosc renderowania grafik aby element li byl na wierzchu*/
+	z-index: 100; /*pozycja wzgledem elementu ul (ustawiony parametr realtive powyzej)  - chodzi o to aby element li byl na wierzchu widoku*/
+	border-top: 1px dashed #751b1b;
+}
+
+/*efekty po najechaniu kursorem na element li zawarty w elemencie ul itd.*/
+ol > li > ul > li:hover
+{
+	background-color: #c34f4f;
+}
+
+ol > li > ul > li:hover > a
+{
+	color: #451717;
+}
