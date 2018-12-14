@@ -1,3 +1,12 @@
+/* transform zawiera pakiet funckji przeksztalcajacych zawartosc div'a */
+/* transform: scale(0.5);         - przyklad uzycia */
+/*lista funckji transformujacych:   scale(), scaleX(), scaleY, scale3d(), scaleZ(), rotate(), rotateX(), rotateY(), rotateZ(), rotate3d(), translate(), translateX(), translateY(), translateZ(), translate3d(), skew(), skewX(), skewY(), matrix(), matrix3d(), perspective()*/
+
+
+/* transition - pakiet animacji - przejscia miedzy stanem zwyklym a przeksztalconym funkcja transform - funckje pakietu transition: ease, linear, ease-in, ease-out, eaase-in-out, step-start, step-end, steps(), cubic-bezier()*/
+/*zapis funkcji transition     transition: [jakie wlasciwosci animujemy] [czas trwania przejscia] [rodzaj (funkcja) przejscia]*/
+
+
 body
 {
 	background-color: #191d21;
@@ -67,30 +76,147 @@ h1
 .photo1
 {
 	width: 450px;
+	/*transition: transform 1s ease-in-out;     animacja tylko przy efekcie transform*/
+	transition: all 1s ease-in-out; /*animacja wszystkich efektow*/
+}
+
+.photo1:hover
+{
+	-webkit-transform: scale(0.9); /*aby dzilalo na wszystkich przegladarkach*/
+	-ms-transform: scale(0.9); /*aby dzilalo na wszystkich przegladarkach*/
+	transform: scale(0.9); /*korzysta z pokietu funkcji transform -pomniejszenie obrazka */
+	opacity: 0.5; /*przezroczystosc*/
 }
 
 
 .photo2
 {
 	width: 450px;
+	transition: transform 0.2s ease-in-out; /*funkcje animacji przejscia*/
 }
+
+.photo2:hover
+{
+	-webkit-transform: scale(0.95) rotate(5deg);
+	-ms-transform: scale(0.95) rotate(5deg);
+	transform: scale(0.85) rotate(5deg);
+}
+
 
 .photo3
 {
 	width: 450px;
 }
 
+.overlay
+{
+	position: relative; /*pozwala okreslac polozenie diva wzgledem diva nadrzednego - za pomoca walsciwosci - left, right, top, bottom*/
+	width: 450px; /*szer. taka sam jak grafiki photo3 */
+	height: 278px;
+	
+}
+
+/*styl elementu klasy .link zawartego w elemencie klasy .overlay*/
+.overlay .link
+{
+	position: absolute;
+	display: block;
+	width: 450px;
+	height: 65px;
+	background-color: #111;
+	left: 0px; /*ukladem odniesienia jest nadrzedny div*/
+	bottom: 0px;
+	opacity: 0; /*przezroczystosc - ustawione na 0 aby napis byl niewidoczny jesli nie najedzie sie kursorem na zdjecie - ponizej w funckji hover*/
+	transition: opacity 0.5s ease-in-out; /*animacje dla zmiany wartosci przezroczystosci*/
+	
+}
+
+.overlay:hover .link
+{
+	opacity: 0.8;
+}
+
+
 .photo4
 {
 	width: 450px;
 }
 
+.overlayT
+{
+	position: relative;
+	width: 450px;
+	height: 278px;
+}
+
+.overlayT .link
+{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #27a38d;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.overlayT:hover .link
+{
+	opacity: 0.9;
+}
+
+
+/*do formatowania ikonki fontello*/
+.icon
+{
+	display: block;
+	top: 25%;
+	position: relative;
+	font-size: 72px;
+}
+
+/*do formatowania napisu pod ikonką fontello*/
+.icon p
+{
+	font-size: 20px;
+}
+
 .photo5
 {
 	width: 450px;
+	height: 278px;
+	overflow: hidden; /*po najechaniu kursorem nastepuje powiekszenie obrazu, ten parametr sprawia ze zostaje on ograniczony rozmiarem div'a - ktory jest staly*/
+}
+
+.photo5 img
+{
+	transition: all 0.5s ease-in-out;
+}
+
+.photo5:hover img
+{
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15); /*w polaczeniu z parametrem overflow: hidden; powoduje to efekt przyblizenia obrazu*/
 }
 
 .photo6
 {
 	width: 450px;
+	height: 278px;
+	overflow: hidden;
+}
+
+.photo6 img
+{
+	transition: all 0.7s ease-in-out;
+}
+
+.photo6:hover img
+{
+	-webkit-transform: scale(1.2) rotate(-5deg);
+	-ms-transform: scale(1.2) rotate(-5deg);
+	transform: scale(1.2) rotate(-5deg);
 }
